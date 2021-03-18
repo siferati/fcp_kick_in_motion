@@ -9,7 +9,7 @@ To run the environment with randomly sampled actions:
 ```python
 import fcpgym as gym
 
-env = gym.make('KickInMotion')
+env = gym.make('KickInMotion', host="localhost", agent_port=3100, monitor_port=3200)
 for _ in range(10):
 	obs = env.reset()
 	done = False
