@@ -19,6 +19,43 @@ for _ in range(10):
 env.close()
 ```
 
+# Kick in motion
+
+```cpp
+/**
+ * The agent walks towards the ball and should learn to kick it while moving.
+ * 
+ * Model: Nao Robot (type 4)
+ * 
+ * Actions: Box(20)
+ *     #       Description                         Min              Max
+ *     ----    --------------------------------    -------------    ------------
+ *     0-19    Joint angular velocity (rad/sec)    -6.1395447097    6.1395447097
+ * 
+ * Observations: Box(67)
+ *     #        Description                            Min             Max
+ *     -----    -----------------------------------    ------------    ------------
+ *     0-2      Ball position relative to torso (m)    -INFINITY       INFINITY
+ *     3-26     Joint angle (deg)                      -INFINITY       INFINITY
+ *     27-29    Torso angular velocity (deg/sec)       -INFINITY       INFINITY
+ *     30-32    Torso proper acceleration (m^2/sec)    -INFINITY       INFINITY
+ *     33-65    Derivatives of all of the above        -INFINITY       INFINITY
+ *     66       Episode elapsed time (sec)             -INFINITY       INFINITY
+ * 
+ * Info: Empty.
+ * 
+ * Reward: Distance the ball moved in the desired kick path.
+ *         Calculated by projecting the current ball position on the desired kick path.
+ *         Range: [-INFINITY, INFINITY].
+ * 
+ * Episode Start: Robot is close enough to kick the ball.
+ * 
+ * Episode End: Ball stops after being kicked,
+ *              or episode takes too long,
+ *              or robot falls.
+ */
+```
+
 # Operating System
 
 [Ubuntu 18](http://releases.ubuntu.com/18.04/).
