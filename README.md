@@ -21,7 +21,7 @@ env.close()
 
 # Preview
 
-[![](http://img.youtube.com/vi/MFrtjojuZAg/0.jpg)](https://youtu.be/MFrtjojuZAg)
+[![](https://i.imgur.com/f0MaVfC.png)](https://youtu.be/MFrtjojuZAg)
 
 # Kick in motion
 
