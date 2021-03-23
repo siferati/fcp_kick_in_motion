@@ -19,6 +19,10 @@ for _ in range(10):
 env.close()
 ```
 
+# Preview
+
+[![](http://img.youtube.com/vi/MFrtjojuZAg/0.jpg)](https://youtu.be/MFrtjojuZAg)
+
 # Kick in motion
 
 ```cpp
